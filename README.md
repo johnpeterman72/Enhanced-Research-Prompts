@@ -3,7 +3,39 @@ Enhanced Research Prompts for Claude
 # Research Prompts Collection
 
 A curated set of prompts for different research scenarios, from quick exploration to comprehensive analysis.
+## Project Overview
 
+This repository contains a collection of specialized AI prompt templates for research and analysis tasks. The project focuses on providing structured approaches to different types of research scenarios:
+
+- **main prompt.txt**: General research analysis template for comprehensive topic breakdowns
+- **enhanced research prompt.txt**: Advanced research protocol for strategic intelligence briefings
+- **Engineering Analysis Scoping Prompt.txt**: Technical analysis framework for engineering domains
+- **Engineering Topic Explorer Prompt.txt**: Discovery-oriented template for exploring unfamiliar engineering topics
+- **quick research prompt.txt**: Conversational deep-dive template for rapid topic exploration
+
+## Architecture
+
+The repository uses a flat file structure with each prompt template serving a specific research methodology:
+
+1. **General Research**: Broad topic analysis with executive summary focus
+2. **Enhanced Research**: Multi-phase analytical protocol with evidence standards
+3. **Engineering Scoping**: Technical assessment framework for engineering domains
+4. **Engineering Explorer**: Landscape mapping for unfamiliar technical topics
+5. **Quick Research**: Rapid analysis for conversational preparation
+
+## Working with Prompt Templates
+
+When modifying or creating new prompt templates:
+
+- Each template follows a structured format with clear phases or sections
+- Templates include specific instructions for output formatting and quality standards
+- Focus on analytical frameworks rather than generic research approaches
+- Maintain consistent terminology: "topic" as the variable placeholder
+- Include specific guidance on evidence standards and source requirements
+
+## File Naming Convention
+
+Templates use descriptive names ending in "prompt.txt" or "Prompt.txt" to clearly indicate their purpose and maintain consistency across the collection.
 ## 📋 Prompt Library
 
 ### 1. Enhanced Research Analysis Prompt
