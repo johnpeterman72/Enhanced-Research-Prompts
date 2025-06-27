@@ -7,11 +7,16 @@ A curated set of prompts for different research scenarios, from quick exploratio
 
 This repository contains a collection of specialized AI prompt templates for research and analysis tasks. The project focuses on providing structured approaches to different types of research scenarios:
 
-- [**main prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/main%20prompt.txt): General research analysis template for comprehensive topic breakdowns
-- [**enhanced research prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/enhanced%20research%20prompt.txt): Advanced research protocol for strategic intelligence briefings
-- [**Engineering Analysis Scoping Prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Analysis%20Scoping%20Prompt.txt): Technical analysis framework for engineering domains
-- [**Engineering Topic Explorer Prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Topic%20Explorer%20Prompt.txt): Discovery-oriented template for exploring unfamiliar engineering topics
-- [**quick research prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/quick%20research%20prompt.txt): Conversational deep-dive template for rapid topic exploration
+- [**main prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/main%20prompt.md): General research analysis template for comprehensive topic breakdowns
+- [**enhanced research prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/enhanced%20research%20prompt.md): Advanced research protocol for strategic intelligence briefings
+- [**Engineering Analysis Scoping Prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Analysis%20Scoping%20Prompt.md): Technical analysis framework for engineering domains
+- [**Engineering Topic Explorer Prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Topic%20Explorer%20Prompt.md): Discovery-oriented template for exploring unfamiliar engineering topics
+- [**quick research prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/quick%20research%20prompt.md): Conversational deep-dive template for rapid topic exploration
+= [Technical Intelligence Analysis Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Technical%20Intelligence%20Analysis%20Prompt.md): Analyst-level assessment of engineering domains for business decisions Best For: Competitive analysis, technical due diligence, strategic technology decisions Provide technical intelligence analysis on: [topic]
+- [Strategic Intelligence Analysis Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Strategic%20Intelligence%20Analysis%20Prompt.md):Formal, comprehensive research for strategic decision-making Best For: Board presentations, investment decisions, policy briefs. Conduct a strategic intelligence analysis on: [topic]
+- [Technical Domain Mapping Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Technical%20Domain%20Mapping%20Prompt.md):Initial exploration of unfamiliar engineering/technical domains Best For: When you don't know what questions to ask yet. Map this technical domain for strategic understanding: [topic]
+- [Rapid Intelligence Briefing Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Rapid%20Intelligence%20Briefing%20Prompt.md):Fast, focused research for informed conversations Best For: Meeting prep, discussion facilitation, rapid learning. Please give me a rapid intelligence briefing on: [topic]
+  
 
 ## Architecture
 
