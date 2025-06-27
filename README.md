@@ -7,11 +7,11 @@ A curated set of prompts for different research scenarios, from quick exploratio
 
 This repository contains a collection of specialized AI prompt templates for research and analysis tasks. The project focuses on providing structured approaches to different types of research scenarios:
 
-- **main prompt.txt**: General research analysis template for comprehensive topic breakdowns
-- **enhanced research prompt.txt**: Advanced research protocol for strategic intelligence briefings
-- **Engineering Analysis Scoping Prompt.txt**: Technical analysis framework for engineering domains
-- **Engineering Topic Explorer Prompt.txt**: Discovery-oriented template for exploring unfamiliar engineering topics
-- **quick research prompt.txt**: Conversational deep-dive template for rapid topic exploration
+- [**main prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/main%20prompt.txt): General research analysis template for comprehensive topic breakdowns
+- [**enhanced research prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/enhanced%20research%20prompt.txt): Advanced research protocol for strategic intelligence briefings
+- [**Engineering Analysis Scoping Prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Analysis%20Scoping%20Prompt.txt): Technical analysis framework for engineering domains
+- [**Engineering Topic Explorer Prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Topic%20Explorer%20Prompt.txt): Discovery-oriented template for exploring unfamiliar engineering topics
+- [**quick research prompt.txt**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/quick%20research%20prompt.txt): Conversational deep-dive template for rapid topic exploration
 
 ## Architecture
 
