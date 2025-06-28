@@ -1,3 +1,4 @@
+![Enhanced-Research-Prompts](./res/github-header.png)
 # Enhanced-Research-Prompts
 Enhanced Research Prompts for Claude
 # Research Prompts Collection
