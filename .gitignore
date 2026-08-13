@@ -1,0 +1,11 @@
+# Private company-specific standards — never publish
+report_outputs_standard.md
+
+# Local tooling artifacts
+package.json
+package-lock.json
+node_modules/
+.claude/
+
+# Legacy pre-migration prompt sources (superseded by prompts/*.md)
+*.txt
