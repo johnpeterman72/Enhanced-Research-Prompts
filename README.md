@@ -72,6 +72,14 @@ organization: copy [`outputs/style-guide-template.md`](outputs/style-guide-templ
 your identity, colors, fonts, and boilerplate once, keep the filled copy private, and hand it to
 your AI alongside any template. Details in [`outputs/README.md`](outputs/README.md).
 
+## Use it as a Claude Skill
+
+Prefer never pasting prompts at all? The whole library ships as a ready-made **`deep-research`**
+Agent Skill in [`skills/`](skills/) — install it once in Claude Code (`.claude/skills/`) or
+upload the zip to claude.ai / Claude Desktop, then just ask for research: Claude picks the right
+protocol, follows the evidence rules, and delivers in the right format automatically. Setup,
+style binding, and troubleshooting: [`skills/README.md`](skills/README.md).
+
 ## Platform notes
 
 - **Claude** — paste the prompt, or add prompts + output templates to a Project so they're always
