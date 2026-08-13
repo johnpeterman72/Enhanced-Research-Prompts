@@ -58,15 +58,18 @@ description. Project-level installs can be committed to that repo so your whole 
 The skill ships company-neutral. To make deliverables come out in your house style:
 
 1. Copy `outputs/style-guide-template.md`, fill it in (worked example:
-   `outputs/style-guide-sample.md`).
-2. Save it as **`company-style-guide.md` in the root of your installed skill folder**
-   (next to `SKILL.md`). The skill checks for that exact file before rendering deliverables.
-3. For claude.ai/Desktop: drop the file in **before** zipping — the upload is private to your
-   account, so your branding stays yours.
+   `outputs/style-guide-sample.md`), and save it as `company-style-guide.md` at this repo's
+   root.
+2. **Claude Code:** also copy it into the root of your installed skill folder (next to
+   `SKILL.md`). The skill checks for that exact filename before rendering deliverables.
+3. **claude.ai/Desktop:** build with the private flag — `sh skills/build.sh --private` or
+   `powershell -File skills/build.ps1 -Private` — which produces
+   `dist/deep-research-skill-private.zip` with the style guide inside. The upload is private to
+   your account, so your branding stays yours. Treat that zip as confidential.
 
-`company-style-guide.md` and `dist/` are gitignored in this repo, and the build scripts exclude
-the file from the distributable zip — a filled style guide never ends up in the public
-repository or a shared zip by accident. Treat any zip that contains one as confidential.
+`company-style-guide.md` and `dist/` are gitignored in this repo, and the default (public)
+build excludes the style guide — a filled brand guide never ends up in the public repository or
+a shared zip by accident.
 
 ## Keeping the skill in sync
 
