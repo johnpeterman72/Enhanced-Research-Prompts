@@ -1,124 +1,106 @@
-![Enhanced-Research-Prompts](./res/github-header.png)
-# Enhanced-Research-Prompts
-Enhanced Research Prompts for Claude
-# Research Prompts Collection
+<p align="center">
+  <img src="res/github-header.png" alt="Enhanced Research Prompts" width="720">
+</p>
 
-A curated set of prompts for different research scenarios, from quick exploration to comprehensive analysis.
-## Project Overview
+# Enhanced Research Prompts
 
-This repository contains a collection of specialized AI prompt templates for research and analysis tasks. The project focuses on providing structured approaches to different types of research scenarios:
+A library of research prompts built for **today's AI assistants** — the ones with web search,
+deep-research modes, and connections to your company's data. Every prompt demands sourced,
+verified, confidence-labeled findings and produces a defined deliverable, from a quick briefing
+to a forensic incident report.
 
-- [**main prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/main%20prompt.md): General research analysis template for comprehensive topic breakdowns
-- [**enhanced research prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/enhanced%20research%20prompt.md): Advanced research protocol for strategic intelligence briefings
-- [**Engineering Analysis Scoping Prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Analysis%20Scoping%20Prompt.md): Technical analysis framework for engineering domains
-- [**Engineering Topic Explorer Prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Engineering%20Topic%20Explorer%20Prompt.md): Discovery-oriented template for exploring unfamiliar engineering topics
-- [**quick research prompt.md**](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/quick%20research%20prompt.md): Conversational deep-dive template for rapid topic exploration
-- [Technical Intelligence Analysis Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Technical%20Intelligence%20Analysis%20Prompt.md): Analyst-level assessment of engineering domains for business decisions Best For: Competitive analysis, technical due diligence, strategic technology decisions Provide technical intelligence analysis on: [topic]
-- [Strategic Intelligence Analysis Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Strategic%20Intelligence%20Analysis%20Prompt.md):Formal, comprehensive research for strategic decision-making Best For: Board presentations, investment decisions, policy briefs. Conduct a strategic intelligence analysis on: [topic]
-- [Technical Domain Mapping Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Technical%20Domain%20Mapping%20Prompt.md):Initial exploration of unfamiliar engineering/technical domains Best For: When you don't know what questions to ask yet. Map this technical domain for strategic understanding: [topic]
-- [Rapid Intelligence Briefing Prompt.md](https://github.com/johnpeterman72/Enhanced-Research-Prompts/blob/main/Rapid%20Intelligence%20Briefing%20Prompt.md):Fast, focused research for informed conversations Best For: Meeting prep, discussion facilitation, rapid learning. Please give me a rapid intelligence briefing on: [topic]
-  
+Works in Claude, ChatGPT, Gemini, Copilot, and any assistant that can search the web. Degrades
+gracefully when it can't: prompts instruct the AI to disclose missing capabilities and label
+unverified content instead of faking it.
 
-## Architecture
+## Quick start
 
-The repository uses a flat file structure with each prompt template serving a specific research methodology:
+1. **Pick a prompt** from the table below and open it in [`prompts/`](prompts/).
+2. **Paste it** into your AI assistant, replacing `[topic]` (and any optional fields you want).
+   For best results use the assistant's research/extended mode and enable web search.
+3. **Optionally attach an output template** from [`outputs/`](outputs/) to control exactly what
+   the deliverable looks like.
 
-1. **General Research**: Broad topic analysis with executive summary focus
-2. **Enhanced Research**: Multi-phase analytical protocol with evidence standards
-3. **Engineering Scoping**: Technical assessment framework for engineering domains
-4. **Engineering Explorer**: Landscape mapping for unfamiliar technical topics
-5. **Quick Research**: Rapid analysis for conversational preparation
+## Choosing a prompt
 
-## Working with Prompt Templates
+| You need to... | Use | Default output |
+|---|---|---|
+| Get smart on a topic before a meeting, fast | [quick-research-briefing](prompts/general/quick-research-briefing.md) | inline briefing |
+| Do full-depth research behind a real decision | [comprehensive-research-analysis](prompts/general/comprehensive-research-analysis.md) | [research-report](outputs/research-report.md) |
+| Map an engineering domain you don't know yet | [engineering-domain-explorer](prompts/engineering/engineering-domain-explorer.md) | domain map |
+| Assess a technology like an analyst (due diligence, invest/adopt) | [engineering-technical-analysis](prompts/engineering/engineering-technical-analysis.md) | [research-report](outputs/research-report.md) |
+| Investigate a failure, incident, or near miss | [failure-analysis-investigation](prompts/engineering/failure-analysis-investigation.md) | [incident-analysis-report](outputs/incident-analysis-report.md) |
+| Rate how mature a technology really is (hype filter) | [technology-readiness-assessment](prompts/engineering/technology-readiness-assessment.md) | [research-report](outputs/research-report.md) |
+| Map the codes, standards, and regulations that apply | [standards-regulatory-research](prompts/engineering/standards-regulatory-research.md) | [research-report](outputs/research-report.md) |
+| Size and understand a market | [market-research-analysis](prompts/market/market-research-analysis.md) | [market-research-report](outputs/market-research-report.md) |
+| Tear down the competition | [competitive-landscape-analysis](prompts/market/competitive-landscape-analysis.md) | [research-report](outputs/research-report.md) |
+| Map who's patenting what in a technology area | [patent-landscape-analysis](prompts/patents/patent-landscape-analysis.md) | [research-report](outputs/research-report.md) |
+| Sweep for prior art before talking to patent counsel | [prior-art-exploration](prompts/patents/prior-art-exploration.md) | [research-report](outputs/research-report.md) |
+| Build a SWOT that survives scrutiny | [swot-analysis](prompts/strategy/swot-analysis.md) | [swot-one-pager](outputs/swot-one-pager.md) |
 
-When modifying or creating new prompt templates:
+The patent and standards prompts are research aids with explicit boundaries — they are **not**
+legal advice, and they say so in their deliverables.
 
-- Each template follows a structured format with clear phases or sections
-- Templates include specific instructions for output formatting and quality standards
-- Focus on analytical frameworks rather than generic research approaches
-- Maintain consistent terminology: "topic" as the variable placeholder
-- Include specific guidance on evidence standards and source requirements
+## How every prompt works
 
-## File Naming Convention
+All twelve prompts share one anatomy, so once you've used one, you know them all:
 
-Templates use descriptive names ending in "prompt.txt" or "Prompt.txt" to clearly indicate their purpose and maintain consistency across the collection.
-## 📋 Prompt Library
+1. **Capability check** — search the web if you can (mandatory, not optional); search internal
+   company data if connected, keeping those findings marked `[INTERNAL]` and separated; if no
+   tools, disclose it and label everything unverified.
+2. **Scoping** — the AI asks a couple of clarifying questions when the topic is ambiguous, or
+   states its assumptions and proceeds.
+3. **A research protocol** — the analytical framework specific to that prompt.
+4. **Evidence standards** — cite every non-obvious claim (title, publisher, date, URL);
+   cross-check the claims conclusions depend on across independent sources; flag `single source`
+   claims; label estimates and show methods; **never fabricate a source, statistic, or quote**.
+5. **Confidence labels** — every key finding is marked **High / Moderate / Low / Inference**, so
+   you know how much weight it bears.
+6. **An output contract** — a defined deliverable structure, either inline or from
+   [`outputs/`](outputs/).
+7. **A pre-delivery checklist** — the AI self-checks before handing over.
 
-### 1. Enhanced Research Analysis Prompt
-**Use Case:** Formal, comprehensive research for strategic decision-making  
-**Best For:** Board presentations, investment decisions, policy briefs  
-**Depth:** High - Full intelligence briefing style  
+## Output templates
 
-**Key Features:**
-- 5-phase research protocol
-- Evidence standards and source verification
-- Executive briefing format
-- Strategic takeaways focus
+The [`outputs/`](outputs/) folder defines the deliverables: research report, executive briefing,
+white paper, technical brief, case study, market research report, SWOT one-pager, and a forensic
+incident-analysis format. Each specifies required sections, length, audience, and writing
+standards.
 
----
+Templates are company-neutral, with `[PLACEHOLDER]` tokens for branding. To adopt them for your
+organization: copy [`outputs/style-guide-template.md`](outputs/style-guide-template.md), fill in
+your identity, colors, fonts, and boilerplate once, keep the filled copy private, and hand it to
+your AI alongside any template. Details in [`outputs/README.md`](outputs/README.md).
 
-### 2. Quick Deep Dive Research Prompt  
-**Use Case:** Fast, conversational research for general topics  
-**Best For:** Prep for discussions, personal learning, blog posts  
-**Depth:** Medium - Balanced insight and accessibility  
+## Platform notes
 
-**Key Features:**
-- Conversational tone
-- Focus on "why this matters"
-- Identifies tensions and controversies
-- Practical next steps
+- **Claude** — paste the prompt, or add prompts + output templates to a Project so they're always
+  in context. Use Research mode for the comprehensive prompts. Internal data arrives via
+  connectors/MCP (Drive, SharePoint, etc.); the `[INTERNAL]` separation in the prompts assumes
+  exactly this setup.
+- **ChatGPT** — use Deep Research for the comprehensive prompts; enable browsing for everything
+  else. Templates can live in a Project or a custom GPT's knowledge.
+- **Gemini** — use Deep Research; Workspace grounding covers the internal-data pass.
+- **Anything else** — the prompts assume nothing platform-specific; they check capabilities at
+  runtime and degrade honestly.
 
----
+## Working the library
 
-### 3. Engineering Topic Explorer Prompt
-**Use Case:** Initial exploration of unfamiliar engineering domains  
-**Best For:** When you don't know what questions to ask yet  
-**Depth:** Broad - Landscape mapping  
+- Start broad, then narrow: `engineering-domain-explorer` produces the smart questions that make
+  `comprehensive-research-analysis` or `engineering-technical-analysis` productive.
+- Chain deliverables: a market entry decision might run market-research → competitive-landscape
+  → SWOT, each feeding the next.
+- The briefing prompts (`quick-research-briefing`) are the cheap first pass; escalate to the
+  comprehensive prompts when the stakes justify it.
 
-**Key Features:**
-- Maps the technical landscape
-- Identifies knowledge gaps
-- Suggests follow-up research questions
-- Technical fundamentals focus
+## What changed in v2 (2026)
 
----
+The original nine prompts (2025) were written for chat-only models: search was optional or
+absent, "recommend resources" invited hallucinated reading lists, and no deliverable was defined.
+v2 consolidates them into four modernized successors — the two generations of each lineage merged
+— and adds eight new prompts across market, patents, standards, strategy, and failure analysis,
+plus the `outputs/` deliverable system. The original files live on in the git history.
 
-### 4. Engineering Analysis Scoping Prompt
-**Use Case:** Technical analyst approach to engineering topics  
-**Best For:** Competitive analysis, technical due diligence  
-**Depth:** Strategic - Business-technical intersection  
+## License
 
-**Key Features:**
-- Market and technical positioning
-- Performance metrics focus
-- Innovation drivers analysis
-- Research hypothesis generation
-
----
-
-## 🎯 Selection Guide
-
-| Scenario | Recommended Prompt | Why |
-|----------|-------------------|-----|
-| Need to sound smart in a C-suite meeting | Enhanced Research Analysis | Comprehensive, authoritative |
-| Exploring a new topic casually | Quick Deep Dive | Conversational, accessible |
-| Starting research on unfamiliar engineering topic | Engineering Topic Explorer | Maps unknowns, suggests questions |
-| Technical competitive analysis | Engineering Analysis Scoping | Strategic, metrics-focused |
-
-## 💡 Usage Tips
-
-1. **Replace `[topic]` with your specific research target**
-2. **Modify depth requirements based on available time**
-3. **Combine prompts for complex projects** (e.g., start with Explorer, then use Enhanced Analysis)
-4. **Adjust formality based on your audience**
-
-## 🔄 Iteration Strategy
-
-- Start broad → narrow down
-- Use Explorer prompts to generate better research questions
-- Move from conversational to formal as understanding deepens
-- Layer multiple prompt approaches for comprehensive coverage
-
----
-
-*Last updated: June 27, 2025*
+[MIT](LICENSE). Use them, adapt them, ship them.
