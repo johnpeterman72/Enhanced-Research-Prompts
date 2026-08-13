@@ -18,6 +18,12 @@ platform-agnostic: Claude, ChatGPT, Gemini, and others.
   report), plus `style-guide-template.md` (brand-binding placeholders) and `outputs/README.md`
   (conventions).
 - `res/` — repository assets (header image).
+- `skills/` — the library packaged as a `deep-research` Agent Skill (works in Claude Code and
+  claude.ai/Desktop). `skills/deep-research/{protocols,outputs}/` are **copies** of `prompts/`
+  and `outputs/` (skills must be self-contained): after editing the library, run
+  `sh skills/build.sh` or `powershell -File skills/build.ps1` to re-sync them and rebuild the
+  upload zip in `dist/` (gitignored). SKILL.md frontmatter must stay cross-platform: only
+  `name`, `description`, `license` (no Claude Code-only fields).
 
 ## The shared prompt anatomy
 
