@@ -5,6 +5,10 @@ contain your company identity. Provide the filled copy to your AI assistant toge
 output template, and it will render deliverables in your house style. Left unfilled, deliverables
 default to clean, unbranded Markdown, which is always acceptable.
 
+**Not sure what "filled in" should look like?** See
+[`style-guide-sample.md`](style-guide-sample.md) — a complete worked example for a fictional
+company.
+
 ---
 
 ## 1. Identity

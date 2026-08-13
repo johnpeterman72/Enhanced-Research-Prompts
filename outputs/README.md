@@ -46,8 +46,9 @@ once for your organization:
 
 The full set lives in [style-guide-template.md](style-guide-template.md). Copy that file, fill it
 in once, keep your filled copy **private** (it's your brand, not the world's), and hand it to the
-AI alongside any template. Structure is mandatory; styling is optional — a template followed in
-plain Markdown is still compliant.
+AI alongside any template. [style-guide-sample.md](style-guide-sample.md) shows a completed
+example for a fictional company. Structure is mandatory; styling is optional — a template
+followed in plain Markdown is still compliant.
 
 ## Universal conventions (apply to every deliverable)
 
